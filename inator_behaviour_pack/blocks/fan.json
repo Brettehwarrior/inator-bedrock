@@ -1,0 +1,119 @@
+{
+    "format_version": "1.20.60",
+    "minecraft:block": {
+      "description": {
+        "identifier": "inator:fan",
+        "traits": {
+            "minecraft:placement_direction": {
+                "enabled_states": ["minecraft:facing_direction"]
+            }
+        },
+        "states": {
+            "inator:on": [false, true]
+        },
+        "menu_category": {
+          "category": "items"
+        }
+      },
+      "components": {
+        "minecraft:geometry":"minecraft:geometry.full_block",
+        "minecraft:material_instances": {
+            "*": {
+            },
+            "up": {
+            "texture": "fan_top"
+            },
+            "down": {
+            "texture": "fan_bottom"
+            },
+            "north": {
+            "texture": "fan_front"
+            },
+            "south": {
+            "texture": "fan_side"
+            },
+            "east": {
+            "texture": "fan_side"
+            },
+            "west": {
+            "texture": "fan_side"
+            }
+        },
+        "minecraft:destructible_by_mining": {
+            "seconds_to_destroy": 0.7
+        },
+        "minecraft:destructible_by_explosion": {
+            "explosion_resistance": 3
+        },
+        "minecraft:custom_components": ["inator:fan_component"],
+        "minecraft:tick": {
+            "interval_range": [2,2]
+        }
+      },
+      "permutations": [
+            {
+                "condition":"q.block_state('inator:on') == true",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                        },
+                        "up": {
+                            "texture": "fan_top"
+                        },
+                        "down": {
+                            "texture": "fan_bottom"
+                        },
+                        "north": {
+                            "texture":"fan_front_on"
+                        },
+                        "south": {
+                            "texture": "fan_side"
+                        },
+                        "east": {
+                            "texture": "fan_side"
+                        },
+                        "west": {
+                            "texture": "fan_side"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:facing_direction') == 'down'",
+                "components": {
+                "minecraft:transformation": { "rotation": [-90, 0, 0] }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:facing_direction') == 'up'",
+                "components": {
+                "minecraft:transformation": { "rotation": [90, 0, 0] }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:facing_direction') == 'north'",
+                "components": {
+                "minecraft:transformation": { "rotation": [0, 0, 0] }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:facing_direction') == 'west'",
+                "components": {
+                "minecraft:transformation": { "rotation": [0, 90, 0] }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:facing_direction') == 'south'",
+                "components": {
+                "minecraft:transformation": { "rotation": [0, 180, 0] }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:facing_direction') == 'east'",
+                "components": {
+                "minecraft:transformation": { "rotation": [0, -90, 0] }
+                }
+            }
+        ]
+    }
+  }

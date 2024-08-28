@@ -1,0 +1,37 @@
+{
+    "format_version": 2,
+    "header": {
+      "description": "A very cool tech addon",
+      "name": "Inator Behaviour Pack",
+      "uuid":"2ea63e35-07b6-4e8a-8085-9b7adb9eff13",
+      "version": [1, 0, 0],
+      "min_engine_version": [1, 20, 60]
+    },
+    "capabilities":["script_eval"],
+    "modules":
+      [
+        {
+          "description": "Inator Addon",
+            "type": "data",
+            "uuid": "8d404c33-2235-42f9-b868-0b203990a239",
+            "version": [1, 0, 0]
+        },
+        {
+          "type": "script",
+          "uuid": "4e7f4130-0940-4092-a170-a04711c55e48",
+          "language": "javascript",
+          "version": [1,0,0],
+          "entry": "scripts/Main.js"
+        }
+      ],
+    "dependencies": [
+      {
+       "uuid":"a3bc7475-6652-4bc6-a950-e705f02a322e",
+        "version":[1,0,0]
+      },
+      {
+        "module_name": "@minecraft/server",
+        "version": "1.12.0"
+      }
+   ]
+  }

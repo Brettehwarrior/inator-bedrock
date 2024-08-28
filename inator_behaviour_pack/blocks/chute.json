@@ -1,0 +1,46 @@
+{
+    "format_version": "1.20.60",
+    "minecraft:block": {
+        "description": {
+            "identifier": "inator:chute",
+            "menu_category": {
+                "category": "items"
+            },
+            "states": {
+                "inator:up": [true, false],
+                "inator:down": [true, false],
+                "inator:north": [false, true],
+                "inator:east": [false, true],
+                "inator:south": [false, true],
+                "inator:west": [false, true]
+            }
+        },
+        "components": {
+            "minecraft:geometry": {
+                "identifier": "geometry.chute",
+                "bone_visibility": {
+                    "north_side": "q.block_state('inator:north') == true",
+                    "north_noside": "q.block_state('inator:north') == false",
+                    "south_side": "q.block_state('inator:south') == true",
+                    "south_noside": "q.block_state('inator:south') == false",
+                    "west_side": "q.block_state('inator:west') == true",
+                    "west_noside": "q.block_state('inator:west') == false",
+                    "east_side": "q.block_state('inator:east') == true",
+                    "east_noside": "q.block_state('inator:east') == false",
+                    "up_side": "q.block_state('inator:up') == true",
+                    "up_noside": "q.block_state('inator:up') == false",
+                    "down_side": "q.block_state('inator:down') == true",
+                    "down_noside": "q.block_state('inator:down') == false"
+                }
+            },
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "chute"
+                }
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0.1
+            }
+        }
+    }
+}

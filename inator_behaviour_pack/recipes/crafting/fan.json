@@ -1,0 +1,31 @@
+{
+	"format_version": "1.20.60",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "inator:fan"
+		},
+		"tags": ["crafting_table", "altar"],
+		"pattern": [
+			"ICI",
+			"CRC",
+			"ICI"
+		],
+		"key": {
+			"I": "minecraft:iron_ingot",
+			"C": "minecraft:copper_ingot",
+			"R": "minecraft:redstone"
+		},
+		"unlock": [
+			{
+				"item": "minecraft:iron_ingot"
+			},
+			{
+				"item": "minecraft:copper_ingot"
+			},
+			{
+				"item": "minecraft:redstone"
+			}
+		],
+		"result": "inator:fan"
+	}
+}

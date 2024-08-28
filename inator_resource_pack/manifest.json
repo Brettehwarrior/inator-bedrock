@@ -1,0 +1,18 @@
+{
+    "format_version": 2,
+    "header": {
+      "description": "Resource pack for Inator",
+      "name": "Inator Resource Pack",
+      "uuid": "a3bc7475-6652-4bc6-a950-e705f02a322e",
+      "version": [1, 0, 0],
+      "min_engine_version": [1, 20, 60]
+     },
+    "modules": [
+      {
+        "description": "Inator Resources",
+        "type": "resources",
+        "uuid": "b64f7672-725f-42f2-a192-f76b7945eaee",
+        "version": [1, 0, 0]
+      }
+    ]
+}

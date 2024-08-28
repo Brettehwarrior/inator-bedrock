@@ -1,0 +1,7 @@
+[
+    {
+        "flipbook_texture": "textures/blocks/fan_front_on",
+        "atlas_tile": "fan_front_on",
+        "frames": [0,1]
+    }
+]
